@@ -1,0 +1,17 @@
+<dataConfig>
+
+    <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/employees" user="root"
+                password="Techigrp@123"/>
+
+    <document>
+
+        <entity name="employee" pk="emp_no" query="select * from employees">
+
+            <entity name="salary" query="select s.salary as curr_salary,s.from_date,s.to_date from salaries s where s.emp_no=${employee.emp_no} order by from_date desc ">
+
+            </entity>
+        </entity>
+
+    </document>
+
+</dataConfig>
