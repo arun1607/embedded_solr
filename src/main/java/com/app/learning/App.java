@@ -19,12 +19,11 @@ import java.nio.file.Path;
 public class App {
 	public static void main(String[] args) throws IOException, SolrServerException {
 		Path solrHome = FileSystems.getDefault().getPath("src/main/resources/solr");
-		EmbeddedSolrServer embeddedSolrServer = new EmbeddedSolrServer(solrHome,"employees");
-		SolrClient solrClient = embeddedSolrServer;
+		SolrClient embeddedSolrServer = new EmbeddedSolrServer(solrHome,"employees");
 		ModifiableSolrParams params = new ModifiableSolrParams();
 		params.set("qt", "/dataimport");
 		params.set("command", "full-import");
 
-		solrClient.query("employees", params);
+		embeddedSolrServer.query("employees", params);
 	}
 }

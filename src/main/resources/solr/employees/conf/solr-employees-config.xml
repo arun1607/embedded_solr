@@ -1,7 +1,7 @@
 <dataConfig>
 
-    <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/employees" user="root"
-                password="Techigrp@123"/>
+    <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/employees" user="user"
+                password="password"/>
 
     <document>
 
