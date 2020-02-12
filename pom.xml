@@ -11,7 +11,7 @@
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <solr>5.2.1</solr>
+        <solr>8.4.1</solr>
     </properties>
     <dependencies>
         <dependency>
